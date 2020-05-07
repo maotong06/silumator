@@ -9,7 +9,7 @@ export default class GameScene extends cc.Component {
     label: cc.Label = null;
 
     @property(cc.Prefab)
-    UIPoker: cc.Prefab = null;
+    PokerPrefab: cc.Prefab = null;
 
     @property(cc.Node)
     pokerContainer: cc.Node = null;
@@ -21,7 +21,7 @@ export default class GameScene extends cc.Component {
         // init logichis
         this.label.string = '游戏场景';
         this.gameCtrl = new GameCtrl()
-        this.gameCtrl.init()
+        this.gameCtrl.init(this.pokerContainer, this.PokerPrefab)
         this.gameCtrl.start()
     }
 }
