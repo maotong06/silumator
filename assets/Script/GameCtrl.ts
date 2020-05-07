@@ -29,7 +29,6 @@ export default class GameCtrl {
         let pokerUIVM: PokerVM = pokerUINode.getComponent(PokerVM)
         pokerUIVM.init(pokerModel)
         pokerUIVM.node.setPosition(pokerModel.point * (900 / 15) - 450, pokerModel.suit * (600 / 5) - 300)
-        console.log(cc.randomRangeInt(0, 100))
         return pokerUIVM
     }
 }
